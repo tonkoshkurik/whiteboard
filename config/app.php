@@ -182,10 +182,10 @@ return [
 
         Backpack\Base\BaseServiceProvider::class,
         Backpack\CRUD\CrudServiceProvider::class,
-        Backpack\PermissionManager\PermissionManagerServiceProvider::class,
         // Backups
         Spatie\Backup\BackupServiceProvider::class,
         Backpack\BackupManager\BackupManagerServiceProvider::class,
+        Backpack\Settings\SettingsServiceProvider::class,
 
 
     ],

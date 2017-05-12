@@ -38,4 +38,12 @@ class Agency extends Authenticatable
     {
         $this->notify(new AgencyResetPassword($token));
     }
+
+    /**
+    * Get profile of this agency
+    *
+    */
+    public function profile(){
+        return $this->hasOne('App\Profile');
+    }
 }
