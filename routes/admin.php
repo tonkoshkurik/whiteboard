@@ -8,5 +8,4 @@ Route::get('/dashboard', function () {
      dd($users);
 
     // return view('backpack::dashboard');
-})->name('home');
-
+})->name('dashboard');

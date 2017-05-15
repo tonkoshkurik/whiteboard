@@ -1,9 +1,7 @@
 <?php
 
-Route::get('/dashboard', function () {
-    
-    $users = Auth::user();
+Route::get('/dashboard', 'DashboardController@index' )->name('agency.dashboard');
 
-    return view('agency.dashboard');
-})->name('home');
+Route::post('/profile', 'ProfileController@store')->name('store.profile');
+
 

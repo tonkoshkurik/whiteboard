@@ -17,14 +17,15 @@ class CreateProfilesTable extends Migration
         Schema::create('profiles', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id')->unsigned();
-            $table->foreign('user_id')
-                        ->references('id')
-                        ->on('agencies')
-                        ->onDelete('cascade');
+//            $table->foreign('user_id')
+//                        ->references('id')
+//                        ->on('agencies')
+//                        ->onDelete('cascade');
             $table->string('first_name');
             $table->string('last_name');
             $table->string('phone');
             $table->string('business_url');
+            $table->string('company_name');
             $table->timestamps();
         });
 
@@ -37,6 +38,6 @@ class CreateProfilesTable extends Migration
      */
     public function down()
     {
-        // Schema::drop('profiles');
+         Schema::dropIfExists('profiles');
     }
 }

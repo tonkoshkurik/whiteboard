@@ -11,5 +11,12 @@ const { mix } = require('laravel-mix');
  |
  */
 
-mix.react('resources/assets/js/app.jsx', 'public/js')
+mix
+  .scripts([
+     'public/vendor/adminlte/bootstrap/js/bootstrap.min.js',
+     'public/vendor/adminlte/plugins/pace/pace.min.js',
+     'public/vendor/adminlte/plugins/slimScroll/jquery.slimscroll.min.js',
+     'public/vendor/adminlte/plugins/fastclick/fastclick.js'
+   ],'public/js/theme.js')
+   .react('resources/assets/js/app.jsx', 'public/js')
    .sass('resources/assets/sass/app.scss', 'public/css');

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Dashboard;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class DashboardController extends Controller
 {
@@ -14,7 +15,15 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        //
+      // Check if this agency has profile
+      if(!Auth::guard('agency')->user()->profile)
+      {
+        return view('agency.dashboard', array(
+            'profile' => false
+          )
+        );
+      }
+      return view('agency.dashboard');
     }
 
     /**

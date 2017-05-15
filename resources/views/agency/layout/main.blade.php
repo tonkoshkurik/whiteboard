@@ -61,13 +61,13 @@
             <span class="icon-bar"></span>
           </a>
 
-          @include('backpack::inc.menu')
+          @include('agency.inc.menu')
         </nav>
       </header>
 
       <!-- =============================================== -->
 
-      @include('backpack::inc.sidebar')
+      @include('agency.inc.sidebar')
 
       <!-- =============================================== -->
 
@@ -100,15 +100,17 @@
 
     @yield('before_scripts')
 
-    <!-- jQuery 2.2.0 -->
-    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-    <script>window.jQuery || document.write('<script src="{{ asset('vendor/adminlte') }}/plugins/jQuery/jQuery-2.2.0.min.js"><\/script>')</script>
-    <!-- Bootstrap 3.3.5 -->
-    <script src="{{ asset('vendor/adminlte') }}/bootstrap/js/bootstrap.min.js"></script>
-    <script src="{{ asset('vendor/adminlte') }}/plugins/pace/pace.min.js"></script>
-    <script src="{{ asset('vendor/adminlte') }}/plugins/slimScroll/jquery.slimscroll.min.js"></script>
-    <script src="{{ asset('vendor/adminlte') }}/plugins/fastclick/fastclick.js"></script>
-    <script src="{{ asset('vendor/adminlte') }}/dist/js/app.min.js"></script>
+    {{--<!-- jQuery 2.2.0 -->--}}
+    {{--<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>--}}
+    {{--<script>window.jQuery || document.write('<script src="{{ asset('vendor/adminlte') }}/plugins/jQuery/jQuery-2.2.0.min.js"><\/script>')</script>--}}
+    {{--<!-- Bootstrap 3.3.5 -->--}}
+    {{--<script src="{{ asset('vendor/adminlte') }}/bootstrap/js/bootstrap.min.js"></script>--}}
+    {{--<script src="{{ asset('vendor/adminlte') }}/plugins/pace/pace.min.js"></script>--}}
+    {{--<script src="{{ asset('vendor/adminlte') }}/plugins/slimScroll/jquery.slimscroll.min.js"></script>--}}
+    {{--<script src="{{ asset('vendor/adminlte') }}/plugins/fastclick/fastclick.js"></script>--}}
+    {{--<script src="{{ asset('vendor/adminlte') }}/dist/js/app.min.js"></script>--}}
+    <script src="{{ asset('js/theme.js') }}"></script>
+    <script src="{{ elixir('js/app.js') }}"></script>
 
     <!-- page script -->
     <script type="text/javascript">
@@ -138,11 +140,11 @@
         });
     </script>
 
-    @include('backpack::inc.alerts')
+    @include('agency.inc.alerts')
 
     @yield('after_scripts')
 
-    <!-- JavaScripts -->
-    {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
+    {{--<!-- JavaScripts -->--}}
+{{--     <script src="{{ elixir('js/app.js') }}"></script>--}}
 </body>
 </html>

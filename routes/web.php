@@ -18,7 +18,7 @@ Route::get('/', function () {
 Route::group(['prefix' => 'agency'], function () {
   Route::get('/login', 'AgencyAuth\LoginController@showLoginForm');
   Route::post('/login', 'AgencyAuth\LoginController@login');
-  Route::post('/logout', 'AgencyAuth\LoginController@logout');
+  Route::get('/logout', 'AgencyAuth\LoginController@logout');
 
   Route::get('/register', 'AgencyAuth\RegisterController@showRegistrationForm');
   Route::post('/register', 'AgencyAuth\RegisterController@register');
@@ -47,10 +47,10 @@ Route::group(['prefix' => 'client'], function () {
 //   Route::get('/login', 'AdminAuth\LoginController@showLoginForm');
 //   Route::post('/login', 'AdminAuth\LoginController@login');
 //   Route::post('/logout', 'AdminAuth\LoginController@logout');
-
+//
 //   Route::get('/register', 'AdminAuth\RegisterController@showRegistrationForm');
 //   Route::post('/register', 'AdminAuth\RegisterController@register');
-
+//
 //   Route::post('/password/email', 'AdminAuth\ForgotPasswordController@sendResetLinkEmail');
 //   Route::post('/password/reset', 'AdminAuth\ResetPasswordController@reset');
 //   Route::get('/password/reset', 'AdminAuth\ForgotPasswordController@showLinkRequestForm');

@@ -1,4 +1,4 @@
-@extends('agency.layout.auth')
+@extends('agency.layout.main')
 
 @section('content')
 <div class="container">

@@ -18,7 +18,7 @@ class RedirectIfAgency
 	public function handle($request, Closure $next, $guard = 'agency')
 	{
 	    if (Auth::guard($guard)->check()) {
-	        return redirect('agency/home');
+	        return redirect('agency/dashboard');
 	    }
 
 	    return $next($request);

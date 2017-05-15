@@ -29,7 +29,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    public $redirectTo = '/agency/dashboard';
+    public $redirectTo = '/agency/login';
 
     /**
      * Create a new controller instance.

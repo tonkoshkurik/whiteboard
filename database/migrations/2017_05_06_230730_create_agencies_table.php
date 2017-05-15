@@ -29,7 +29,8 @@ class CreateAgenciesTable extends Migration
      */
     public function down()
     {
-        Schema::drop('profiles');
-        Schema::drop('agencies');
+//        Schema::dropIfExists('profiles');
+//        Schema::dropIfExists('dashboards');
+        Schema::dropIfExists('agencies');
     }
 }

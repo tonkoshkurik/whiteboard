@@ -15,6 +15,11 @@ class CreateDashboardsTable extends Migration
     {
         Schema::create('dashboards', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('agency_id');
+//            $table->foreign('agency_id')
+//              ->references('id')
+//              ->on('agencies')
+//              ->onDelete('cascade');
             $table->string('logo_url')->nullable();
             $table->string('logo_path')->nullable();
             $table->string('name')->nullable();
@@ -29,6 +34,7 @@ class CreateDashboardsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('dashboards');
+      // WTF
+       Schema::dropIfExists('dashboards');
     }
 }
